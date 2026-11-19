@@ -28,12 +28,13 @@ export function buildPageMetadata(options: {
   }
   languages["x-default"] = absoluteUrl(localePath(defaultLocale, path));
 
-  const fullTitle = title.includes(siteConfig.brandName)
+  // Page `title` is the segment only; root layout template appends brand.
+  const absoluteTitle = title.includes(siteConfig.brandName)
     ? title
     : `${title} | ${siteConfig.brandName}`;
 
   return {
-    title: fullTitle,
+    title,
     description,
     alternates: {
       canonical: url,
@@ -44,7 +45,7 @@ export function buildPageMetadata(options: {
       locale: locale === "hy" ? "hy_AM" : locale === "ru" ? "ru_RU" : "en_US",
       url,
       siteName: siteConfig.brandName,
-      title: fullTitle,
+      title: absoluteTitle,
       description,
       ...(ogImage
         ? { images: [{ url: absoluteUrl(ogImage), alt: title }] }
@@ -52,7 +53,7 @@ export function buildPageMetadata(options: {
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title: absoluteTitle,
       description,
       ...(ogImage ? { images: [absoluteUrl(ogImage)] } : {}),
     },
