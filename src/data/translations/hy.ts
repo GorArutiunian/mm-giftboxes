@@ -82,8 +82,8 @@ const hy: Dictionary = {
     lead: "Սուրբ Ծնունդ, Ամանոր, Secret Santa և աշխատակիցների նվերներ՝ ջերմ, բարեկիրթ փաթեթավորմամբ։ Պատվիրեք միայն Instagram Direct-ով։",
     ctaPrimary: "Պատվիրել Instagram-ով",
     ctaSecondary: "Դիտել տուփերը",
-    featuredHeading: "Հաստատված առաջարկ",
-    featuredLead: "Այս պահին կատալոգում հաստատված է մեկ տուփ։ Մանրամասները՝ ստորև։",
+    featuredHeading: "Հաստատված առաջարկներ",
+    featuredLead: "Այս պահին կատալոգում հաստատված են երկու տուփ։ Մանրամասները՝ ստորև։",
     occasionsHeading: "Առիթներ",
     occasionsLead: "Ընտրեք առիթը և հարցրեք առկայության մասին Instagram-ում։",
     occasionChristmas: "Սուրբ Ծնունդ և Ամանոր",
@@ -98,8 +98,10 @@ const hy: Dictionary = {
     orderStep2: "Գրեք մեզ Instagram Direct՝ @mmgiftboxes։",
     orderStep3: "Հաստատեք առկայությունը, պարունակությունը և առաքումը Երևանում։",
     galleryHeading: "Մթնոլորտ",
-    galleryLead: "Իրական լուսանկարները կավելացվեն սեփականատիրոջ կողմից։",
-    galleryNote: "Ստորևի պատկերները պիտակավորված տեղապահներ են՝ ոչ թե ապրանքների ցուցակ։",
+    galleryLead: "Պահեր MM Gift Boxes-ի վերջին հավաքածուներից։",
+    galleryNote:
+      "Պատկերասրահի կադրերը միայն մթնոլորտ են՝ գնով ապրանքները կատալոգում են։",
+
     storyHeading: "MM Gift Boxes",
     storyLead:
       "Մենք հավաքում ենք նվեր տուփեր Երևանում՝ ջերմության և ուշադրության շեշտադրմամբ։ Ավելին՝ «Մեր մասին» էջում։",

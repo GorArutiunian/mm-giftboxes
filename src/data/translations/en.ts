@@ -81,8 +81,8 @@ const en: Dictionary = {
     lead: "Christmas, New Year, Secret Santa, and employee gifts — warm packaging, honest details. Orders via Instagram Direct only.",
     ctaPrimary: "Order on Instagram",
     ctaSecondary: "Browse boxes",
-    featuredHeading: "Confirmed offering",
-    featuredLead: "One box is confirmed in the catalog right now. Details below.",
+    featuredHeading: "Confirmed offerings",
+    featuredLead: "Two gift boxes are confirmed in the catalog right now. Details below.",
     occasionsHeading: "Occasions",
     occasionsLead: "Pick an occasion and ask about availability on Instagram.",
     occasionChristmas: "Christmas & New Year",
@@ -97,9 +97,10 @@ const en: Dictionary = {
     orderStep2: "Message us on Instagram Direct at @mmgiftboxes.",
     orderStep3: "Confirm availability, contents, and Yerevan delivery.",
     galleryHeading: "Atmosphere",
-    galleryLead: "Real photos will be added by the owner.",
+    galleryLead: "Moments from recent MM Gift Boxes assemblies.",
     galleryNote:
-      "Images below are labeled placeholders — not a product inventory.",
+      "Gallery frames are atmosphere only — priced products are listed in the catalog.",
+
     storyHeading: "MM Gift Boxes",
     storyLead:
       "We assemble gift boxes in Yerevan with warmth and attention. More on the About page.",

@@ -5,7 +5,7 @@
  */
 const base = (process.argv[2] || "http://127.0.0.1:3000").replace(/\/$/, "");
 const locales = ["hy", "en", "ru"];
-const productSlug = "coffee-break-gift-box";
+const productSlugs = ["coffee-break-gift-box", "cozy-blanket-gift-box"];
 const paths = [
   "",
   "gift-boxes",
@@ -16,7 +16,7 @@ const paths = [
   "about",
   "contact",
   "privacy",
-  `products/${productSlug}`,
+  ...productSlugs.map((s) => `products/${s}`),
 ];
 
 const errors = [];
@@ -70,7 +70,8 @@ await expectContains(`${base}/sitemap.xml`, [
   "/hy",
   "/en",
   "/ru",
-  productSlug,
+  "coffee-break-gift-box",
+  "cozy-blanket-gift-box",
 ]);
 
 for (const locale of locales) {
@@ -84,11 +85,20 @@ for (const locale of locales) {
   }
 }
 
-await expectContains(`${base}/en/products/${productSlug}`, [
+await expectContains(`${base}/en/products/coffee-break-gift-box`, [
   '"@type":"Product"',
   '"price":6900',
   '"priceCurrency":"AMD"',
   "Coffee Break Gift Box",
+  "/products/coffee-break/01.jpg",
+]);
+
+await expectContains(`${base}/en/products/cozy-blanket-gift-box`, [
+  '"@type":"Product"',
+  '"price":11900',
+  '"priceCurrency":"AMD"',
+  "Cozy Blanket Gift Box",
+  "/products/cozy-blanket/01.jpg",
 ]);
 
 await expectContains(`${base}/hy`, ['"@type":"Organization"', "mmgiftboxes"]);

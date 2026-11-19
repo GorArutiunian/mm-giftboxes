@@ -1,25 +1,17 @@
 # Product photos
 
-Place owner-supplied product images in this folder.
+Owner-supplied crops only (no Instagram scraping).
 
-## Naming
+## Published (wired in `src/data/products.ts`)
 
-Suggested pattern:
+- `coffee-break/` — Coffee Break Gift Box (6,900 AMD)
+- `cozy-blanket/` — Cozy Blanket Gift Box (11,900 AMD)
 
-```
-coffee-break-1.jpg
-coffee-break-2.jpg
-```
+## Not for sale listings
 
-Then reference them from `src/data/products.ts`:
+- `_archive/` — unpriced frames (daisy, forest green, sage tea, double-mug coffee, delivery teaser, etc.)
 
-```ts
-images: ["/products/coffee-break-1.jpg", "/products/coffee-break-2.jpg"],
-```
+## Adding new photos
 
-## Rules
-
-- Only use photos you own or have permission to publish.
-- Do **not** scrape Instagram.
-- Until real photos are added, the site shows labeled placeholders — they are not inventory.
-- Prefer optimized JPG/WebP, roughly 1200–1600px on the long edge.
+1. Place owned images under `public/products/<slug>/`.
+2. Reference paths in `src/data/products.ts` → `images: ["/products/<slug>/01.jpg"]`.

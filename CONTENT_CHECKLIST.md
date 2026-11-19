@@ -1,47 +1,45 @@
 # Content checklist — owner follow-ups
 
-Only confirmed facts are live. Everything below is waiting on the owner.
+## Published products (confirmed)
 
-## Product — Coffee Break Gift Box
+### Coffee Break Gift Box — 6,900 AMD
 
-- [ ] Exact contents list (hy / en / ru)
+- [x] Price confirmed (captions / hashtags)
+- [x] Contents listed from owner caption
+- [x] Product photos cropped (Instagram UI stripped)
 - [ ] Availability status (`in_stock` / `limited` / `made_to_order`) once verified
-- [ ] Real product photos in `public/products/` + paths in `src/data/products.ts`
-- [ ] Optional second/third angles for gallery
-- [ ] Confirm price still **6,900 AMD** before major campaigns
+- [ ] Confirm contents still match current Instagram offering before campaigns
 
-## Additional products
+### Cozy Blanket Gift Box — 11,900 AMD
 
-- [ ] Add only when confirmed — never invent boxes, prices, or stock
-- [ ] Localized name, short description, full description
-- [ ] Occasions tags (christmas, new-year, secret-santa, corporate, general)
-- [ ] Inquiry message text for Instagram
-- [ ] Photos (owned rights)
+- [x] Price confirmed (11900 դրամ overlay + caption list)
+- [x] Contents from caption (blanket, socks, notebook, pen, thermos cup, coaster)
+- [x] Hero + matching grid crop
+- [ ] Availability status once verified
+- [ ] Official Armenian/English/Russian **marketing name** if different from “Cozy Blanket Gift Box” / «Փափուկ ծածկոց նվեր տուփ»
+- [ ] Confirm thermos cup + coaster appear in current physical boxes (listed in caption; may be tucked in photos)
+
+## Unpriced frames (archived — not in catalog)
+
+Saved under `public/products/_archive/` — **do not invent prices**:
+
+- [ ] Daisy / daisy stationery sets — need official name + price
+- [ ] Forest green scarf/socks/pine mug set — need name + price
+- [ ] Sage blanket + honey + botanical plate set — need name + price
+- [ ] Double-mug coffee “feast” box — need price (distinct from Coffee Break 6900)
+- [ ] Delivery teaser lifestyle frame — gallery/about only
+- [ ] Logo sticker close-up — brand asset at `public/brand/mm-logo-sticker.jpg`
 
 ## Brand & operations
 
 - [ ] Delivery fee / timing copy (replace TODO on delivery page)
-- [ ] Any public address or phone — **only if you want them published**
-- [ ] About-page story refinements / founder note (optional)
-- [ ] Hero / gallery lifestyle photos (owned)
-
-## Site configuration
-
-- [ ] Production `SITE_URL`
-- [ ] Custom domain on Vercel
+- [ ] Any public address or phone — only if you want them published
+- [ ] Production `SITE_URL` + custom domain
 - [ ] Google Search Console verification + sitemap submit
-- [ ] Optional analytics ID (`NEXT_PUBLIC_ANALYTICS_ID`) and provider wiring
-- [ ] Review privacy copy if analytics go live
+- [ ] Optional analytics ID
 
 ## Translations
 
 - [ ] Native speaker pass on Armenian (default)
 - [ ] Native speaker pass on Russian
-- [ ] English tone check for boutique voice
-
-## Do not
-
-- Scrape Instagram for images or captions
-- Invent corporate bulk discounts, branding SLAs, or timelines
-- Publish fake reviews or star ratings
-- Claim Lighthouse / ranking / ChatGPT inclusion guarantees
+- [ ] English boutique tone check

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/FaqSection";
 import { Gallery } from "@/components/Gallery";
@@ -59,16 +60,15 @@ export default async function HomePage({
             </p>
           </div>
           <div className="relative animate-fade-up-delay">
-            <div className="aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-cream via-ivory to-sage/25 shadow-soft">
-              <div className="flex h-full flex-col items-center justify-center gap-3 p-8 text-center">
-                <span className="font-display text-5xl text-coffee/35">MM</span>
-                <span className="text-xs uppercase tracking-[0.2em] text-coffee-soft/70">
-                  {dict.common.imagePlaceholder}
-                </span>
-                <span className="max-w-xs text-sm text-coffee-soft/70">
-                  {dict.common.imagePlaceholderHint}
-                </span>
-              </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cream shadow-soft">
+              <Image
+                src="/products/coffee-break/01.jpg"
+                alt={dict.common.brand}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
             </div>
           </div>
         </div>
