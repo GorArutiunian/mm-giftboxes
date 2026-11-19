@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf7f2;
+  --foreground: #3d2a22;
+  --accent: #7f8f72;
+  --gold: #c4a574;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(196, 165, 116, 0.35);
+  color: #3d2a22;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-coffee px-5 py-3 text-sm font-medium tracking-wide text-ivory transition duration-300 hover:bg-coffee-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-coffee/20 bg-transparent px-5 py-3 text-sm font-medium tracking-wide text-coffee transition duration-300 hover:border-sage hover:bg-sage/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-sage-deep;
+  }
+
+  .prose-site {
+    @apply max-w-2xl text-base leading-relaxed text-coffee-soft sm:text-lg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-fade-up-delay-2,
+  .animate-soft-pulse {
+    animation: none !important;
+  }
+}
