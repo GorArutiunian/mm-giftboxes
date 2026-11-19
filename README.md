@@ -48,9 +48,28 @@ Edit `src/data/products.ts`. Each product needs `id`, `slug`, localized `name` /
 
 Translations for UI chrome live in `src/data/translations/{hy,en,ru}.ts`.
 
+## Create GitHub remote (if not already)
+
+This VM was not logged into `gh`. From a machine with GitHub access:
+
+```bash
+cd mm-giftboxes
+gh auth login
+gh repo create mm-giftboxes --public --source=. --remote=origin --push
+```
+
+Or manually: create an empty repo on GitHub, then:
+
+```bash
+git remote add origin git@github.com:YOUR_USER/mm-giftboxes.git
+git push -u origin cursor/mm-giftboxes-catalog-f097
+# optionally also push main
+git push -u origin main
+```
+
 ## Shortest Vercel path
 
-1. Push this repo to GitHub.
+1. Push this repo to GitHub (see above).
 2. Import the repo at [vercel.com/new](https://vercel.com/new).
 3. Framework preset: Next.js (default).
 4. Add environment variable `SITE_URL` = your production URL (after first deploy you can set the final domain and redeploy).
