@@ -1,19 +1,19 @@
 import Image from "next/image";
 import type { Dictionary } from "@/data/translations";
 
-/** Atmosphere frames from owner screenshots — not sold as priced inventory. */
+/** Atmosphere frames from the live catalog staff. */
 const atmosphere = [
   {
-    src: "/products/_archive/daisy-set-01.jpg",
-    alt: "Gift box atmosphere — daisy theme (not a priced listing)",
+    src: "/products/daisy-set/01.jpg",
+    alt: "Daisy gift box atmosphere",
   },
   {
-    src: "/products/_archive/forest-green-01.jpg",
-    alt: "Gift box atmosphere — forest green theme (not a priced listing)",
+    src: "/products/forest-green/01.jpg",
+    alt: "Forest green gift box atmosphere",
   },
   {
-    src: "/products/_archive/sage-wheat-01.jpg",
-    alt: "Gift box atmosphere — sage theme (not a priced listing)",
+    src: "/products/sage-wheat/01.jpg",
+    alt: "Sage wheat gift box atmosphere",
   },
 ];
 

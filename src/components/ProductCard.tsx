@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import {
-  formatPriceAMD,
+  formatProductPrice,
   type Product,
 } from "@/data/products";
 import type { Dictionary } from "@/data/translations";
@@ -53,7 +53,11 @@ export function ProductCard({
         <div className="mt-auto flex items-end justify-between gap-3 pt-2">
           <p className="text-sm font-medium tracking-wide text-coffee">
             <span className="sr-only">{dict.common.priceLabel}: </span>
-            {formatPriceAMD(product.priceAMD, locale)}
+            {formatProductPrice(
+              product,
+              locale,
+              dict.common.priceOnInstagram,
+            )}
           </p>
           <Link
             href={href}

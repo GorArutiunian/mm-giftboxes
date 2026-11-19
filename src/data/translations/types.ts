@@ -45,6 +45,7 @@ export interface Dictionary {
     copyName: string;
     priceFrom: string;
     priceLabel: string;
+    priceOnInstagram: string;
     availabilityUnknown: string;
     contentsTodo: string;
     imagePlaceholder: string;

@@ -10,7 +10,6 @@ export function organizationJsonLd() {
     name: siteConfig.brandName,
     url: absoluteUrl("/"),
     sameAs: [...siteConfig.social.sameAs],
-    // No street address or telephone — not verified for publication.
   };
 }
 
@@ -28,12 +27,15 @@ export function productJsonLd(product: Product, locale: Locale) {
       "@type": "Brand",
       name: siteConfig.brandName,
     },
-    offers: {
+  };
+
+  // Offer with price only when confirmed — never invent AMD amounts.
+  if (product.priceAMD != null) {
+    data.offers = {
       "@type": "Offer",
       url,
       priceCurrency: "AMD",
       price: product.priceAMD,
-      // Availability only when verified — Coffee Break is unknown until owner confirms.
       ...(product.availability === "in_stock"
         ? { availability: "https://schema.org/InStock" }
         : product.availability === "limited"
@@ -41,13 +43,12 @@ export function productJsonLd(product: Product, locale: Locale) {
           : product.availability === "made_to_order"
             ? { availability: "https://schema.org/PreOrder" }
             : {}),
-    },
-  };
+    };
+  }
 
   if (images.length > 0) {
     data.image = images;
   }
 
-  // No aggregateRating — reviews not verified.
   return data;
 }

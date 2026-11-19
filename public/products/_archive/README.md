@@ -1,7 +1,3 @@
-# Archived product frames (unpriced)
+# Archive
 
-Clean crops from owner-supplied Instagram screenshots. **Not published as catalog products** because prices are unconfirmed.
-
-Do not invent AMD prices. Promote to `public/products/<slug>/` only after the owner confirms name + price.
-
-See `CONTENT_CHECKLIST.md` in the repo root.
+Previously held unpriced crops. Those frames are now published under sibling product folders (`daisy-set/`, `forest-green/`, etc.) with `priceAMD: null` until the owner confirms prices.

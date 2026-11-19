@@ -5,7 +5,17 @@
  */
 const base = (process.argv[2] || "http://127.0.0.1:3000").replace(/\/$/, "");
 const locales = ["hy", "en", "ru"];
-const productSlugs = ["coffee-break-gift-box", "cozy-blanket-gift-box"];
+const productSlugs = [
+  "coffee-break-gift-box",
+  "cozy-blanket-gift-box",
+  "daisy-gift-box",
+  "floral-stationery-gift-box",
+  "forest-green-gift-box",
+  "sage-tea-gift-box",
+  "sage-wheat-gift-box",
+  "coffee-feast-gift-box",
+  "cozy-home-gift-box",
+];
 const paths = [
   "",
   "gift-boxes",
@@ -70,8 +80,7 @@ await expectContains(`${base}/sitemap.xml`, [
   "/hy",
   "/en",
   "/ru",
-  "coffee-break-gift-box",
-  "cozy-blanket-gift-box",
+  ...productSlugs,
 ]);
 
 for (const locale of locales) {
@@ -84,6 +93,22 @@ for (const locale of locales) {
     ]);
   }
 }
+
+// Gift-boxes listing must show every catalog product
+await expectContains(`${base}/en/gift-boxes`, [
+  "Coffee Break Gift Box",
+  "Cozy Blanket Gift Box",
+  "Daisy Gift Box",
+  "Floral Stationery Gift Box",
+  "Forest Green Gift Box",
+  "Sage Tea Gift Box",
+  "Sage Wheat Gift Box",
+  "Coffee Feast Gift Box",
+  "Cozy Home Gift Box",
+  "Price on Instagram",
+  "6,900 AMD",
+  "11,900 AMD",
+]);
 
 await expectContains(`${base}/en/products/coffee-break-gift-box`, [
   '"@type":"Product"',
@@ -98,7 +123,12 @@ await expectContains(`${base}/en/products/cozy-blanket-gift-box`, [
   '"price":11900',
   '"priceCurrency":"AMD"',
   "Cozy Blanket Gift Box",
-  "/products/cozy-blanket/01.jpg",
+]);
+
+await expectContains(`${base}/en/products/daisy-gift-box`, [
+  "Daisy Gift Box",
+  "Price on Instagram",
+  "/products/daisy-set/01.jpg",
 ]);
 
 await expectContains(`${base}/hy`, ['"@type":"Organization"', "mmgiftboxes"]);
@@ -110,5 +140,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Smoke OK (${locales.length} locales × ${paths.length} paths + robots/sitemap).`,
+  `Smoke OK (${productSlugs.length} products × ${locales.length} locales + gift-boxes listing).`,
 );

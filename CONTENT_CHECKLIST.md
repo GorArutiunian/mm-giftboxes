@@ -1,45 +1,31 @@
 # Content checklist — owner follow-ups
 
-## Published products (confirmed)
+## Confirmed prices (live)
 
-### Coffee Break Gift Box — 6,900 AMD
+- [x] Coffee Break Gift Box — **6,900 AMD** + contents + photos
+- [x] Cozy Blanket Gift Box — **11,900 AMD** + contents + photos
+- [ ] Availability status for both once verified
+- [ ] Official cozy marketing name if different from current labels
 
-- [x] Price confirmed (captions / hashtags)
-- [x] Contents listed from owner caption
-- [x] Product photos cropped (Instagram UI stripped)
-- [ ] Availability status (`in_stock` / `limited` / `made_to_order`) once verified
-- [ ] Confirm contents still match current Instagram offering before campaigns
+## Catalog staff without confirmed price (live, inquire CTA)
 
-### Cozy Blanket Gift Box — 11,900 AMD
+All published with photos; **do not invent AMD prices**:
 
-- [x] Price confirmed (11900 դրամ overlay + caption list)
-- [x] Contents from caption (blanket, socks, notebook, pen, thermos cup, coaster)
-- [x] Hero + matching grid crop
-- [ ] Availability status once verified
-- [ ] Official Armenian/English/Russian **marketing name** if different from “Cozy Blanket Gift Box” / «Փափուկ ծածկոց նվեր տուփ»
-- [ ] Confirm thermos cup + coaster appear in current physical boxes (listed in caption; may be tucked in photos)
-
-## Unpriced frames (archived — not in catalog)
-
-Saved under `public/products/_archive/` — **do not invent prices**:
-
-- [ ] Daisy / daisy stationery sets — need official name + price
-- [ ] Forest green scarf/socks/pine mug set — need name + price
-- [ ] Sage blanket + honey + botanical plate set — need name + price
-- [ ] Double-mug coffee “feast” box — need price (distinct from Coffee Break 6900)
-- [ ] Delivery teaser lifestyle frame — gallery/about only
-- [ ] Logo sticker close-up — brand asset at `public/brand/mm-logo-sticker.jpg`
+- [ ] Daisy Gift Box — confirm official name, price, contents
+- [ ] Floral Stationery Gift Box — name, price, contents
+- [ ] Forest Green Gift Box — name, price, contents
+- [ ] Sage Tea Gift Box — name, price, contents
+- [ ] Sage Wheat Gift Box — name, price, contents (may overlap sage-tea — confirm if same SKU)
+- [ ] Coffee Feast Gift Box (double mug) — price (distinct from Coffee Break 6900)
+- [ ] Cozy Home Gift Box — name, price, contents
 
 ## Brand & operations
 
-- [ ] Delivery fee / timing copy (replace TODO on delivery page)
-- [ ] Any public address or phone — only if you want them published
-- [ ] Production `SITE_URL` + custom domain
-- [ ] Google Search Console verification + sitemap submit
-- [ ] Optional analytics ID
+- [ ] Delivery fee / timing (TODO on delivery page)
+- [ ] Production `SITE_URL` + domain
+- [ ] Search Console + sitemap
+- [ ] Optional analytics
 
 ## Translations
 
-- [ ] Native speaker pass on Armenian (default)
-- [ ] Native speaker pass on Russian
-- [ ] English boutique tone check
+- [ ] Native speaker pass hy / en / ru

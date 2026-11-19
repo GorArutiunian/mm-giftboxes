@@ -7,7 +7,7 @@ import { OrderCta } from "@/components/OrderCta";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { ProductCard } from "@/components/ProductCard";
 import {
-  formatPriceAMD,
+  formatProductPrice,
   getProductBySlug,
   products,
 } from "@/data/products";
@@ -113,7 +113,11 @@ export default async function ProductPage({
               {product.name[locale]}
             </h1>
             <p className="mt-4 text-xl font-medium tracking-wide text-coffee">
-              {formatPriceAMD(product.priceAMD, locale)}
+              {formatProductPrice(
+                product,
+                locale,
+                dict.common.priceOnInstagram,
+              )}
             </p>
             <p className="mt-2 text-sm text-coffee-soft">
               {dict.product.availabilityLabel}: {dict.common.availabilityUnknown}
